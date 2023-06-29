@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - image: okteto.dev/graphql-leo-oh:latest
-        name: adsoftsito
+        name: leo-oh
         envFrom:
         - configMapRef:
-            name: adsoftsito-config
+            name: leo-oh-config
         livenessProbe:
           httpGet:
             path: /ht/
