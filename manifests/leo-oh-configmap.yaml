@@ -10,5 +10,5 @@ data:
   DEV_DATABASE: db
   DEV_USER: admin
   DEV_PASSWORD: test
-  DEV_HOST: leo-oh-postgres
+  DEV_HOST: adsoft-postgres
   DEV_PORT: "5432"

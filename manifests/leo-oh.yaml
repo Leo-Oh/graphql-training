@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: graphql-leo-oh
+  name: hacker-leo-oh
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: graphql-leo-oh
+      app: hacker-leo-oh
   template:
     metadata:
       labels:
-        app: graphql-leo-oh
+        app: hacker-leo-oh
     spec:
       containers:
-      - image: okteto.dev/graphql-leo-oh:latest
+      - image: okteto.dev/hacker-leo-oh:latest
         name: leo-oh
         envFrom:
         - configMapRef:
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: graphql-leo-oh
+  name: hacker-leo-oh
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP
   ports:
-  - name: "graphql-leo-oh"
+  - name: "hacker-leo-oh"
     port: 8080
   selector:
-    app: graphql-leo-oh
+    app: hacker-leo-oh
