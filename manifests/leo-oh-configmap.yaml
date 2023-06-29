@@ -1,0 +1,14 @@
+# kubernetes .env
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: leo-oh-config
+  labels:
+    app: postgres
+data:
+  DEV_SECRET_KEY: i-love-leo-oh-dev
+  DEV_DATABASE: db
+  DEV_USER: admin
+  DEV_PASSWORD: test
+  DEV_HOST: leo-oh-postgres
+  DEV_PORT: "5432"
