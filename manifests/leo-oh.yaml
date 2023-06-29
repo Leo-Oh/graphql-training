@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hacker-leo-oh
+  name: hacker-adsoftsito
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hacker-leo-oh
+      app: hacker-adsoftsito
   template:
     metadata:
       labels:
-        app: hacker-leo-oh
+        app: hacker-adsoftsito
     spec:
       containers:
-      - image: okteto.dev/hacker-leo-oh:latest
-        name: leo-oh
+      - image: okteto.dev/hacker-adsoftsito:latest
+        name: adsoftsito
         envFrom:
         - configMapRef:
-            name: leo-oh-config
+            name: adsoftsito-config
         livenessProbe:
           httpGet:
             path: /ht/
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hacker-leo-oh
+  name: hacker-adsoftsito
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP
   ports:
-  - name: "hacker-leo-oh"
+  - name: "hacker-adsoftsito"
     port: 8080
   selector:
-    app: hacker-leo-oh
+    app: hacker-adsoftsito

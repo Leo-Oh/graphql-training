@@ -2,11 +2,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: leo-oh-config
+  name: adsoftsito-config
   labels:
     app: postgres
 data:
-  DEV_SECRET_KEY: i-love-leo-oh-dev
+  DEV_SECRET_KEY: i-love-adsoftsito-dev
   DEV_DATABASE: db
   DEV_USER: admin
   DEV_PASSWORD: test

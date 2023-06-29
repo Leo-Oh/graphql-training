@@ -1,35 +1,35 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: leooh-postgres
+  name: adsoft-postgres
   labels:
-    app: leooh-postgres
+    app: adsoft-postgres
 spec:
   ports:
   - port: 5432
     name: db
   type: ClusterIP
   selector:
-    app: leooh-postgres
+    app: adsoft-postgres
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: leooh-postgres
+  name: adsoft-postgres
 spec:
   selector:
     matchLabels:
-      app: leooh-postgres
+      app: adsoft-postgres
   replicas: 1
-  serviceName: leooh-postgres
+  serviceName: adsoft-postgres
   template:
     metadata:
       labels:
-        app: leooh-postgres
+        app: adsoft-postgres
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-      - name: leooh-postgres
+      - name: adsoft-postgres
         image: postgres:14
         imagePullPolicy: "IfNotPresent"
         ports:

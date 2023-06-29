@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: postgres-config
   labels:
-    app: leooh-postgres
+    app: adsoft-postgres
 data:
   POSTGRES_DB: db
   POSTGRES_USER: admin
