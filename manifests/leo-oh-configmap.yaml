@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: adsoftsito-config
+  name: lo-oh-config
   labels:
     app: postgres
 data:
-  DEV_SECRET_KEY: i-love-adsoftsito-dev
+  DEV_SECRET_KEY: i-love-lo-oh-dev
   DEV_DATABASE: db
   DEV_USER: admin
   DEV_PASSWORD: test
-  DEV_HOST: adsoft-postgres
+  DEV_HOST: leooh-postgres
   DEV_PORT: "5432"
