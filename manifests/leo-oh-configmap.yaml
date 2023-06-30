@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: lo-oh-config
+  name: leo-oh-config
   labels:
     app: postgres
 data:
